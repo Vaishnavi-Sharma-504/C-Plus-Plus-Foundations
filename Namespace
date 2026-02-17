@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+namespace namespace1
+{
+    string name="Rajesh";
+    int age=20;
+}
+namespace namespace2
+{
+    string name="Priya";
+    int age=19;
+}
+int main()
+{
+    cout<<namespace1::name<<endl<<namespace1::age<<endl;
+cout<<namespace2::name<<endl;
+cout<<namespace2::age<<endl;
+return 0;
+}
