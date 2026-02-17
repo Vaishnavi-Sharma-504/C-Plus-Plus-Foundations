@@ -1,0 +1,64 @@
+//Vaishnavi Sharma
+//Experiment-5
+#include <iostream>
+using namespace std;
+class Bankaccount{
+    private:
+    string name;
+    int accountnumber;
+    string accounttype;
+    float balance;
+public:
+void assign()
+{
+    cout<<"Enter user name:";
+    cin>>name;
+    cout<<"Enter acc.no.:";
+    cin>>accountnumber;
+    cout<<"Enter acc.type:";
+    cin>>accounttype;
+    cout<<"Enter current balance:";
+    cin>>balance;
+}
+void deposit()
+{
+    float amount;
+    cout<<"Enter amount to deposit:";
+    cin>>amount;
+    balance += amount;
+    cout<<"Amount deposited successfully"<<endl;
+}
+void withdraw()
+{
+    float amount;
+    cout<<"Enter amount to withdraw:";
+    cin>>amount;
+    if (amount<balance)
+    {
+        balance -= amount;
+        cout<<"Amount withdrawl successfully"<<endl;
+        
+    }
+    else
+    {
+        cout<<"Insufficient balance"<<endl;
+    }
+    
+}
+void display()
+{
+    
+cout<<"Depositor name:"<<name<<endl;
+cout<<"Current balance:"<<balance<<endl;
+}
+};
+int main()
+{
+    Bankaccount content;
+    content. assign();
+    content. deposit();
+    content. withdraw();
+    system("clear");
+    content. display();
+    return 0;
+}
