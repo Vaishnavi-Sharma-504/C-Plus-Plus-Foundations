@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+class Result {
+    private:
+    string name;
+    int clas, rollno;
+    int sum;
+public:
+void assign()
+{
+    cout<<"Enter student name:";
+    cin>>name;
+    cout<<"Enter rollno:";
+    cin>>rollno;
+    cout<<"class:";
+    cin>>clas;
+    
+}
+void total()
+{ int S1,S2,S3;
+    cout<<"Enter marks for three subjects:"<<endl<<"S1:";
+    cin>>S1;
+    cout<<"S2:";
+    cin>>S2;
+    cout<<"S3:";
+    cin>>S3;
+    sum=S1+S2+S3;
+    cout<<"Total of all sub:"<<sum<<endl;
+    
+}
+void result()
+{ int min=20,max=60;
+    if (sum <= min)
+        cout<<"Name: "<<name<<endl<<"Result: fail";
+    
+    else if (sum > min && sum < max)
+        cout<<"Name: "<<name<<endl<<"Result: Pass";
+else if (sum == max)
+cout<<"Name: "<<name<<endl<<"Result: Outstanding";
+
+else
+    cout<<"Invalid";
+} };
+int main()
+{
+    Result acc;
+    acc. assign();
+    acc. total();
+    system("clear");
+    acc. result();
+    return 0;
+    
+    
+}
